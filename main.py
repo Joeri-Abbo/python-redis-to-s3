@@ -25,6 +25,7 @@ s3_conn = boto3.client(
 # Export Redis keys and values to S3
 for key in redis_conn.keys():
     value = redis_conn.get(key)
+    print(key.decode("utf-8"), value.decode("utf-8"))
     s3_conn.put_object(
         Bucket=config["s3"]["bucket"],
         Key=key.decode("utf-8"),

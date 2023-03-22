@@ -37,9 +37,6 @@ Replace the placeholders with your actual connection details.
 
 To use the script, simply run the redis_to_s3.py file using Python:
 
-sh
-Copy
-
 ```sh 
 python3 main.py
 ```
